@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFrameworks>net6.0;net48</TargetFrameworks>
+	<TargetFrameworkIdentifier Condition="'$(TargetFramework)'=='net48'">.NETFramework</TargetFrameworkIdentifier>
+  </PropertyGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)'=='net48'">
+		<Reference Include="System.Web" />
+		<Reference Include="System.Net.Http" />
+	</ItemGroup>
+
+</Project>
